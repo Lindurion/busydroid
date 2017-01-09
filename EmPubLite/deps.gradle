@@ -1,0 +1,30 @@
+allprojects {
+  repositories {
+    jcenter()
+  }
+}
+
+ext {
+  // Android SDK:
+  androidBuildToolsVersion = "25.0.2"
+  androidCompileSdkVersion = 25
+  androidMinSdkVersion = 16
+  androidTargetSdkVersion = 25
+
+  // Versions:
+  appcompatVersion = "25.1.0"
+  junitVersion = "4.12"
+
+  // Build tool dependencies:
+  toolDeps = []
+
+  // Application dependencies:
+  appDeps = [
+      appcompatV7: "com.android.support:appcompat-v7:${appcompatVersion}",
+  ]
+
+  // Test dependencies:
+  testDeps = [
+      junit: "junit:junit:${junitVersion}",
+  ]
+}
