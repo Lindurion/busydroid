@@ -27,4 +27,6 @@ dependencies {
   compile rootProject.appDeps.appcompatV7
 
   testCompile rootProject.testDeps.junit
+  testCompile rootProject.testDeps.openGl  // Required by Robolectric for SDK 23+.
+  testCompile rootProject.testDeps.robolectric
 }

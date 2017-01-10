@@ -13,18 +13,28 @@ ext {
 
   // Versions:
   appcompatVersion = "25.1.0"
+  daggerVersion = "2.8"
   junitVersion = "4.12"
+  openGlVersion = "gl1.1-android-2.1_r1"
+  robolectricVersion = "3.2.1"
+  truthVersion = "0.31"
 
   // Build tool dependencies:
-  toolDeps = []
+  toolDeps = [
+      dagger: "com.google.dagger:dagger-compiler:${daggerVersion}",
+  ]
 
   // Application dependencies:
   appDeps = [
       appcompatV7: "com.android.support:appcompat-v7:${appcompatVersion}",
+      dagger: "com.google.dagger:dagger:${daggerVersion}",
   ]
 
   // Test dependencies:
   testDeps = [
       junit: "junit:junit:${junitVersion}",
+      openGl: "org.khronos:opengl-api:${openGlVersion}",
+      robolectric: "org.robolectric:robolectric:${robolectricVersion}",
+      truth: "com.google.truth:truth:${truthVersion}",
   ]
 }
