@@ -1,6 +1,10 @@
 allprojects {
   repositories {
     jcenter()
+
+    maven {
+      url "https://s3.amazonaws.com/repo.commonsware.com"
+    }
   }
 }
 
@@ -12,12 +16,14 @@ ext {
   androidTargetSdkVersion = 25
 
   // Versions:
-  appcompatVersion = "25.1.0"
+  androidSupportVersion = "25.1.0"
   daggerVersion = "2.8"
+  eventBusVersion = "3.0.0"
   junitVersion = "4.12"
   openGlVersion = "gl1.1-android-2.1_r1"
   robolectricVersion = "3.2.1"
   truthVersion = "0.31"
+  wakefulVersion = "1.1.0"
 
   // Build tool dependencies:
   toolDeps = [
@@ -26,8 +32,11 @@ ext {
 
   // Application dependencies:
   appDeps = [
-      appcompatV7: "com.android.support:appcompat-v7:${appcompatVersion}",
+      appcompatV7: "com.android.support:appcompat-v7:${androidSupportVersion}",
       dagger: "com.google.dagger:dagger:${daggerVersion}",
+      eventBus: "org.greenrobot:eventbus:${eventBusVersion}",
+      supportV13: "com.android.support:support-v13:${androidSupportVersion}",
+      wakeful: "com.commonsware.cwac:wakeful:${wakefulVersion}",
   ]
 
   // Test dependencies:

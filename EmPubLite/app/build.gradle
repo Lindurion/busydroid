@@ -13,6 +13,9 @@ android {
     versionName "1.0"
 
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    // Support older versions of Android by auto-generating PNGs from vector drawables.
+    vectorDrawables.generatedDensities = ["hdpi", "xxhdpi"]
   }
 
   buildTypes {

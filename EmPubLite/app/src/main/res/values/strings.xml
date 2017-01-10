@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+  <string name="about">About</string>
   <string name="app_name">EmPub Lite</string>
+  <string name="enter_notes_here">Enter notes here</string>
   <string name="hello_world">Hello, world!</string>
+  <string name="help">Help</string>
 </resources>
