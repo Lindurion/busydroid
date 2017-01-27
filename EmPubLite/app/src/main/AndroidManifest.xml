@@ -10,6 +10,7 @@
       android:xlargeScreens="true" />
 
   <application
+      android:name=".EmPubLiteApplication"
       android:allowBackup="false"
       android:icon="@mipmap/ic_launcher_molecule"
       android:label="@string/app_name"

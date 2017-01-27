@@ -28,6 +28,9 @@ android {
 
 dependencies {
   compile rootProject.appDeps.appcompatV7
+  compile rootProject.appDeps.eventBus
+  compile rootProject.appDeps.gson
+  compile rootProject.appDeps.materialTabs
   compile rootProject.appDeps.supportV13
 
   testCompile rootProject.testDeps.junit

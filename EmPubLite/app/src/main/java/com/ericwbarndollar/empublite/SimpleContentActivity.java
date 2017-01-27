@@ -5,17 +5,20 @@ import android.os.Bundle;
 
 /** Activity for displaying simple static text content. */
 public final class SimpleContentActivity extends AppCompatActivity {
+  public static final String EXTRA_FILE_PATH = "file_path";
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
     if (getSupportFragmentManager().findFragmentById(android.R.id.content) == null) {
-      // TODO: Pass valid argument for WebView content file path in.
       getSupportFragmentManager().beginTransaction()
-          .add(android.R.id.content, SimpleContentFragment.newInstance("" /* contentFilePath */))
+          .add(android.R.id.content, SimpleContentFragment.newInstance(getFilePath()))
           .commit();
     }
   }
 
+  private String getFilePath() {
+    return getIntent().getStringExtra(EXTRA_FILE_PATH);
+  }
 }
